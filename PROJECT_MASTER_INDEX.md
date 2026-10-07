@@ -1,131 +1,127 @@
-# PROJECT MASTER INDEX
+# PROJECT MASTER INDEX: PUNE EARTH OBSERVATION PhD
 
 ## 1. What the PhD Project Is
 
-A PhD research project in remote sensing / Earth observation, studying multi-decadal land use and land cover (LULC) change in the Pune district, Maharashtra, India, using satellite imagery from Landsat (1990–2026), Sentinel-2 (2018–2026), and Sentinel-1 SAR (2017–2025).
+A doctoral research project in Remote Sensing and Earth Observation studying multi-decadal land-use and land-cover (LULC) transformation across the **Pune district, Maharashtra, India**, utilizing multi-sensor satellite observations (Landsat, Sentinel-1 SAR, Sentinel-2 MSI) spanning **1990–2026**.
 
-## 2. Overall Research Objective
+See the comprehensive research framework in [CURRENT_RESEARCH_VISION.md](CURRENT_RESEARCH_VISION.md).
 
-To build a defensible, uncertainty-quantified, multi-decadal land-cover change record for the Pune district at 30 m resolution, validated against human-interpreted gold-standard labels, and to use this record to characterize urban expansion, water body dynamics, vegetation stress, and land-change trajectories.
+---
 
-## 3. Geographic Scope
+## 2. Research Authority & Architecture Hierarchy
 
-- **District:** Pune district, Maharashtra, India
-- **Benchmark windows (30 m, 5.8% of district):**
-  - `pune_G30_khadakwasla_mutha` — urban–periurban corridor with reservoirs
-  - `pune_G30_baramati_agri` — semi-arid agricultural plain
-  - `pune_G30_mulshi_ghats` — Western Ghats forested/reservoir landscape
-- **District-wide:** 240 m overview; 30 m pilot for 4 dry-season epochs (1990, 2000, 2010, 2020)
+```text
+                     CURRENT RESEARCH VISION
+                    (CURRENT_RESEARCH_VISION.md)
+                                 │
+                                 ▼
+                     FROZEN SCIENTIFIC HISTORY
+                        (PHASE 1 → PHASE 6)
+                                 │
+                                 ▼
+                       CURRENT REAL PHASE 7
+                      (LIVE_PHASE7_STATUS.md)
+                                 │
+                                 ▼
+                        FUTURE RESEARCH WORK
 
-## 4. Temporal Scope
-
-- **Landsat:** 1990–2026 (L5 TM, L7 ETM+, L8 OLI, L9 OLI-2)
-- **Sentinel-2:** 2018–2026 (10–20 m, resampled to 30 m for fusion)
-- **Sentinel-1 SAR:** 2017–2025 (C-band, VV/VH)
-- **CHIRPS rainfall:** 1981–2026 (monthly, 5 km)
-- **Reference products:** GHSL (1975–2030), WSF-Evolution (1985–2015), JRC GSW (1984–2020), WorldCover (2020/21), Esri (2017–2023), GLC_FCS30D (1990–2022)
-
-## 5. Major Datasets
-
-| Dataset | Location | Size | Status |
-|---------|----------|------|--------|
-| Landsat composites (3 windows, 37 years) | phase1/data/, phase2/data/ | ~150 MB (ZIPs) | READY |
-| Sentinel-2 composites | phase1/data/ | ~26 MB | READY |
-| Gold sample design (641 pts, 125 blocks) | phase4/data/, phase6/data/ | interpreter kits | NOT INTERPRETED |
-| T1 training sample (699 pts) | phase6/data/ | interpreter kits | NOT INTERPRETED |
-| District pilot composites (4 epochs) | phase5/data/ | ~30 MB (ZIPs) | VALIDATED |
-| Phase 7 repository snapshot | phase7/data/ | ~19 MB | FROZEN |
-| Phase 7 git bundle | phase7/data/ | ~19 MB | FROZEN |
-
-## 6. Overall Research Architecture
-
-```
-Satellite data (Landsat/S2/S1) → Compositing → Harmonisation → Feature engineering
-    → Classification (XGBoost/TempCNN/Transformer)
-    → Temporal smoothing (HMM) → Uncertainty quantification
-    → Thematic analysis (urban/water/vegetation/flood)
-    → Validation (silver → gold) → District scaling
+                [OLD ARCHIVED PHASE 7 (phase7/)]
+              = Historical Reference Material Only
 ```
 
-## 7. Phase 1 → Phase 7 Progression
+### The Three Repository Tiers:
+1. **FROZEN SCIENTIFIC HISTORY (Phases 1–6):**
+   - Unmodifiable historical foundation. Contains data harmonisation, baseline models, 63 evaluation experiments, Protocol v2 pre-registration, silver pilot cube, and human gold sample design.
+2. **CURRENT LIVE PHASE 7:**
+   - Active, ongoing research work executed in the clean, current computational environment (~198 GB available storage). Documented in [LIVE_PHASE7_STATUS.md](LIVE_PHASE7_STATUS.md).
+3. **ARCHIVED / REFERENCE PHASE 7 MATERIAL (`phase7/`):**
+   - Retained working snapshot generated during an earlier low-storage (~18 GB free space) pre-current period prior to container loss. Strictly **non-authoritative**.
+   - *Note on Obsolete Phases:* Conceptual or temporary references to "Phase 7.1", "Phase 8", "Phase 9", or "Phase 10" from the old environment have been completely removed from the authoritative repository structure.
 
-| Phase | Purpose | Status | Key Output | Important Limitation |
-|-------|---------|--------|------------|---------------------|
-| 1 | Data foundation: compositing, harmonisation, QA for 3 benchmark windows | Completed | 37-year Landsat dry/annual composites, S2 monthly, S1 monthly, terrain | S2-Landsat radiometric offset discovered; monsoon season unobserved; district only at 240 m |
-| 2 | Baseline modelling: L1 classification, temporal reconstruction, thematic analysis (35 experiments) | Completed (silver only) | L1 classifier (macro-F1 0.98 blocks, 0.66–0.81 unseen), temporal LULC maps, water/urban/stress analysis | All accuracy against silver/products only; gold not interpreted; crop types unresolved |
-| 3 | Systematic evaluation: 63 experiments, gate framework, transferability, uncertainty | Completed | Gate framework (G1-G6); SAR+terrain improve transfer; temporal context reduces false built-up | Gates 1, 5, 6 NOT PASSED; 1990 built-up implausible; calibration fails on unseen landscapes |
-| 4 | District scaling design: frozen evaluation protocol, gold sample design, product benchmark | Completed (design) | Protocol v2, 641-point gold design, product benchmark, 6 confirmatory pre-registrations | NOT_READY: needs human gold + district cube |
-| 5 | Pilot cube + infrastructure: district 30 m pilot composites, observation support analysis | Completed (partial) | 4 dry-season district epochs validated; observation-support table; product benchmark extended | NOT_READY: only 4/72 registered products built |
-| 6 | Gold workflow + decisions: D1 (addendum review), D2 (sensor correction), D3 (compute route) | Completed (decisions) | Decisions D1/D2/D3; T1 v2 training sample; interpreter kits; gold workflow | NOT_READY: 0 labels; compute boundary |
-| 7 | Runner + restoration: confirmatory runner implemented/tested, container restored | Completed (code) | C1/C2 runners validated; spatial context restored byte-identical; all freeze reports | NOT_READY: 0 gold, 0 T1, no cube, no confirmatory runs |
+---
 
-## 8. Current Status
+## 3. Geographic Scope & Benchmark Windows
 
-**Phase 7: NOT_READY.** The project is blocked at two boundaries:
-1. **Human-label boundary:** 0 Tier-A gold labels, 0 T1 training labels
-2. **Compute boundary:** the full district feature cube requires a machine larger than the sandbox
+- **District-Wide Domain:** Entire Pune District (~15,642 km²), evaluated at 240 m overview and 30 m pilot epochs.
+- **Three 30 m Benchmark Windows (covering 5.8% of district area):**
+  1. `pune_G30_khadakwasla_mutha`: Urban–peri-urban corridor along the Mutha river, including Pune city core, peri-urban fringe, and Khadakwasla reservoir.
+  2. `pune_G30_baramati_agri`: Semi-arid agricultural plain dominated by sugarcane, canal networks, and rainfed cropping systems.
+  3. `pune_G30_mulshi_ghats`: High-relief Western Ghats forested escarpment containing moist/dry deciduous forests, heavy monsoon rainfall, and Mulshi reservoir.
 
-The next scientific action is: two independent human interpreters label the 641 gold points using the Phase 6 interpreter kits.
+---
 
-## 9. Important Scientific Decisions
+## 4. Temporal Scope & Satellite Sensor Fleet
 
-| Decision | Record | Location |
-|----------|--------|----------|
-| D1: P4-C1@v2 addendum review | APPROVED WITH CORRECTION | phase6/reports/phase6_D1_review.md |
-| D2: Cross-sensor TM correction | LOCAL PIF RMA (not Roy 2016) | phase6/reports/phase6_D2_sensor_correction_decision.md |
-| D3: Compute route for district cube | Route A (repository engine on Planetary Computer) | phase6/reports/phase6_D3_compute_decision.md |
-| S2→OLI transform | Fitted, corridor only; fails outside corridor (P3-I1) | phase2/reports/phase1_audit.md §7–8 |
-| Protocol v2 freeze | Before any confirmatory run | phase4/reports/phase4_readiness_gate.md |
+| Concept | Definition & Range |
+|:---|:---|
+| **Archive Availability** | Period during which satellite instruments collected data:<br>• Landsat 5 TM: 1984–2013<br>• Landsat 7 ETM+: 1999–present (SLC-off post-May 2003)<br>• Landsat 8 OLI: 2013–present<br>• Landsat 9 OLI-2: 2021–present<br>• Sentinel-2 MSI: 2015–present (operational S2A/S2B in study: 2018–2026)<br>• Sentinel-1 SAR: 2014–present (S1 C-band in study: 2017–2025)<br>• CHIRPS Rainfall: 1981–present |
+| **Project Analysis Window** | **1990–2026** (37-year observational record) |
+| **Actually Processed & Used** | • Landsat seasonal dry-season composites (1990–2026, 3 windows at 30 m, district at 240 m)<br>• Sentinel-2 optical composites (2018–2026)<br>• District 30 m silver pilot cubes (1990, 2000, 2010, 2020) |
+| **Planned / Pending** | Full 37-year district-wide 30 m wall-to-wall feature cube (awaiting cloud compute execution) |
 
-## 10. Important Rejected Hypotheses/Findings
+---
 
-- **P3-I1 (S2→OLI outside corridor):** NOT SUPPORTED — corridor-fitted transform fails on other landscapes
-- **P3-J1 (domain probability predicts error):** NOT SUPPORTED — predicts in 1 of 6 directions only
-- **P3-J2 (domain adaptation: CORAL/importance weighting/self-training):** NOT SUPPORTED — only few-shot target labels work
-- **P3-K1/K2 (annual change timing):** NOT SUPPORTED — annual precision not observationally supported
-- **Gate 6 (district reconstruction):** NOT PASSED — product not defensible for district scaling
-- **Crop-type classification:** PENDING — silhouette < 0.25; clusters are a greenness gradient, not discrete types
+## 5. Phase Progression & Status Matrix
 
-## 11. Important Limitations
+| Phase | Purpose | Status | Key Output | Important Limitation / Lesson |
+|:---|:---|:---|:---|:---|
+| [Phase 1](phase1/) | Satellite compositing, harmonization, QA | **FROZEN** | 37-yr Landsat dry-season composites (3 windows + district 240m) | Pre-2013 data sparse (2–11 clear passes/yr); monsoon optical blindness |
+| [Phase 2](phase2/) | Baseline L1 modelling & thematic analysis | **FROZEN** | Initial L1 classification maps, change masks | Silver consensus severely overestimates 1990 built-up (50–74% vs WSF 21%) |
+| [Phase 3](phase3/) | Systematic 63-experiment evaluation | **FROZEN** | Benchmark evaluations, spatial transfer tests | Gates 1, 5, 6 NOT PASSED; S2→OLI corridor transform fails in Mulshi/Baramati |
+| [Phase 4](phase4/) | Protocol hardening & validation sample design | **FROZEN** | Protocol v2 pre-registration; 641-pt Tier-A gold design | No human gold labels interpreted; all metrics remained silver |
+| [Phase 5](phase5/) | Pilot cube build & QA validation | **FROZEN** | 4-epoch (1990, 2000, 2010, 2020) district 30m pilot cube | Verified pipeline scalability, but full 37-yr district cube pending |
+| [Phase 6](phase6/) | Key generation, decision reviews, T1 sample | **FROZEN** | Decisions D1, D2, D3; blind evaluator keys; T1 699-pt sample | D2 chose local PIF RMA; D3 chose Route A cloud compute; labels uninterpreted |
+| [Live Phase 7](LIVE_PHASE7_STATUS.md) | Active execution in current environment | **ACTIVE** | Dedicated execution environment, verified 198 GiB disk space | Gate NOT_READY: strictly blocked on human Tier-A gold interpretation |
+| [Old Phase 7](phase7/) | Historical container-loss recovery snapshot | **REFERENCE** | Working runner scripts (C1/C2 synthetically tested) | Non-authoritative snapshot; generated under low disk storage (~18 GB) |
 
-1. **No human gold labels exist** — all accuracy is against silver (product consensus) or AI interpretation
-2. **District at 30 m covers only 5.8%** — three benchmark windows only
-3. **Pre-2013 record sparse** — 2–11 clear dry-season observations per year
-4. **Wet season unobserved** — optical blindness during monsoon
-5. **S2-Landsat fusion limited** — S2→OLI transform fitted on one landscape only
-6. **1990 built-up implausible** — corridor mapped 50–74% built-up vs WSF 21%
-7. **No crop labels, no water gauge/storage data**
-8. **Gate 4 of Phase 3 is not blind** — model designed after seeing SAR/terrain results
+---
 
-## 12. Where Each Important Artifact Is Located
+## 6. Important Scientific Decisions (Frozen Records)
 
-| Artifact | Path |
-|----------|------|
-| Phase 2 results (35 experiments) | phase2/reports/phase2_results.md |
-| Phase 3 results (63 experiments) | phase3/reports/phase3_results_1.md |
-| Phase 4 final report | phase4/reports/phase4_final_report.md |
-| Phase 4 audit (weakness matrix) | phase4/reports/phase4_audit.md |
-| Phase 5 readiness gate | phase5/reports/phase5_readiness_gate.md |
-| Phase 6 gold workflow | phase6/reports/phase6_human_gold_workflow.md |
-| Phase 7 readiness gate | phase7/reports/phase7_readiness_gate.md |
-| Phase 7 confirmatory freeze | phase7/reports/phase7_confirmatory_freeze.md |
-| Gold interpreter kits | phase6/data/phase6_gold_kit_INTERPRETER_A.zip, _B.zip |
-| T1 interpreter kits | phase6/data/phase6_T1v2_kit_INTERPRETER_A.zip, _B.zip |
-| Repository snapshot | phase7/data/phase7_repository_snapshot.zip |
-| Git bundle (full history) | phase7/data/phase7_repository.bundle |
+| Decision | Authority & Location | Core Determination |
+|:---|:---|:---|
+| **D1: P4-C1@v2 Review** | [phase6/reports/phase6_D1_review.md](phase6/reports/phase6_D1_review.md) | Approved Protocol v2 rules with explicit addendum constraints. |
+| **D2: Cross-Sensor TM Correction** | [phase6/reports/phase6_D2_sensor_correction_decision.md](phase6/reports/phase6_D2_sensor_correction_decision.md) | Adopted **local PIF RMA regression** over global Roy (2016) coefficients due to local soil and canopy reflectance. |
+| **D3: District Cube Compute Route** | [phase6/reports/phase6_D3_compute_decision.md](phase6/reports/phase6_D3_compute_decision.md) | Selected **Route A** (Planetary Computer in-situ compute) for full district 30 m feature cube generation. |
+| **Protocol v2 Pre-registration** | [phase4/reports/phase4_readiness_gate.md](phase4/reports/phase4_readiness_gate.md) | Permanently froze confirmatory evaluation criteria prior to unblinding any validation data. |
 
-## 13. Large File Storage
+---
 
-All files in this repository are under 30 MB and stored directly in Git. No Git LFS is used. The complete SHA256 manifest is at `provenance/SHA256_MANIFEST.csv`. The original source material is preserved at the researcher's local machine path: `yash renu maam /` (external backup).
+## 7. Important Rejected Hypotheses & Negative Findings
 
-## 14. How a New Claude Should Navigate the Repository
+- **P3-I1 (Spatial Invariance of Sensor Transform):** **REJECTED.** Spectral transforms fitted on the Khadakwasla corridor fail on other landscapes.
+- **P3-J1 (Domain Probability Predicts Error):** **REJECTED.** Domain classifier probability failed to predict spatial transfer error in 5 out of 6 transfer directions.
+- **P3-J2 (Unsupervised Domain Adaptation):** **REJECTED.** CORAL, importance weighting, and self-training failed to recover transfer performance.
+- **P3-K1/K2 (Annual Land-Change Precision):** **REJECTED.** Annual timing of change events cannot be observationally supported with historical Landsat observation densities.
+- **Crop-Type Separation:** **NOT SUPPORTED.** Clustering yielded silhouette scores < 0.25; clusters represent continuous greenness gradients rather than distinct botanical crops.
 
-1. **Start here** → read this file
-2. **Read** `CLAUDE_HANDOFF_MASTER.md` for safety rules and prohibited actions
-3. **Read** `RESEARCH_HISTORY.md` for chronological context
-4. **Read** the current phase README: `phase7/README.md`
-5. **Inspect** `provenance/SHA256_MANIFEST.csv` for file integrity
-6. **Inspect** phase reports in `phaseN/reports/`
-7. **Check** `RESEARCH_STATUS.md` for current blockers
-8. **Perform** a read-only audit before modifying anything
-9. **Ask** for authorization before any modification
+---
+
+## 8. Where Important Artifacts Are Located
+
+| Artifact | Authoritative Path |
+|:---|:---|
+| Master Entry Point for AI Assistants | [CLAUDE_START_HERE.md](CLAUDE_START_HERE.md) |
+| Research Vision & Scope | [CURRENT_RESEARCH_VISION.md](CURRENT_RESEARCH_VISION.md) |
+| Safety & Handoff Protocol | [CLAUDE_HANDOFF_MASTER.md](CLAUDE_HANDOFF_MASTER.md) |
+| Current Live Phase 7 Status | [LIVE_PHASE7_STATUS.md](LIVE_PHASE7_STATUS.md) |
+| Chronological Narrative | [RESEARCH_HISTORY.md](RESEARCH_HISTORY.md) |
+| Research Status & Gating | [RESEARCH_STATUS.md](RESEARCH_STATUS.md) |
+| Data Provenance & Sensor Tiers | [DATA_PROVENANCE.md](DATA_PROVENANCE.md) |
+| Reproducibility Protocol | [REPRODUCIBILITY.md](REPRODUCIBILITY.md) |
+| Cryptographic Hash Manifest | [provenance/SHA256_MANIFEST.csv](provenance/SHA256_MANIFEST.csv) |
+| Master File Inventory | [manifests/MASTER_FILE_MANIFEST.csv](manifests/MASTER_FILE_MANIFEST.csv) |
+| Human Gold Interpreter Kits | `phase6/data/phase6_gold_kit_INTERPRETER_A.zip`, `_B.zip` |
+| T1 Training Kits | `phase6/data/phase6_T1v2_kit_INTERPRETER_A.zip`, `_B.zip` |
+| Historical Evaluator Keys | `phase6/data/phase6_KEYS_evaluator_only.zip` |
+
+---
+
+## 9. How a New Research Agent (Claude) Must Navigate This Repository
+
+1. **Start at [CLAUDE_START_HERE.md](CLAUDE_START_HERE.md)** — Do NOT take action until this is read.
+2. **Read [CURRENT_RESEARCH_VISION.md](CURRENT_RESEARCH_VISION.md)** — Understand what the project is, what is established, and what remains to be tested.
+3. **Read [CLAUDE_HANDOFF_MASTER.md](CLAUDE_HANDOFF_MASTER.md)** — Review mandatory negative constraints and safety rules.
+4. **Read [LIVE_PHASE7_STATUS.md](LIVE_PHASE7_STATUS.md)** — Check the active execution status in the clean environment.
+5. **Inspect [RESEARCH_STATUS.md](RESEARCH_STATUS.md)** and phase READMEs (`phase1/` through `phase6/`).
+6. **Execute a READ-ONLY AUDIT.** Report findings to the researcher and await explicit authorization.

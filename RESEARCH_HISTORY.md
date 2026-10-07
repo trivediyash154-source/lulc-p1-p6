@@ -171,3 +171,12 @@
 **What was frozen:** Confirmatory state (no test was run); gold freeze report (NOT_AVAILABLE); T1 freeze report (NOT_AVAILABLE); cube manifest (pilot only).
 
 **What carried forward:** Everything needed for confirmatory runs exists except: human labels and the full district cube.
+
+---
+
+## Current Archival Interpretation
+
+1. **Phases 1–6 are Frozen Scientific History:** The methodologies, negative results, Gate 1/5/6 failures, and Protocol v2 pre-registrations documented in Phases 1–6 constitute an unmodifiable foundation. They must never be rewritten or retroactively reconciled.
+2. **Archived Phase 7 Material is Reference-Only:** The historical material inside `phase7/` represents an earlier snapshot generated under severely restricted disk storage (~18 GB free space) prior to container loss. It is retained strictly as non-authoritative working material for historical provenance and code reference.
+3. **The Active/Current Phase 7 is Conducted Separately:** The true, active Phase 7 research execution proceeds in the clean, current computational environment (~198 GB available storage) and is documented in [LIVE_PHASE7_STATUS.md](LIVE_PHASE7_STATUS.md).
+4. **Obsolete Phase 8–10 Artifacts Removed:** Any conceptual, provisional, or low-storage references to "Phase 7.1", "Phase 8", "Phase 9", or "Phase 10" from earlier sessions have been completely removed from the authoritative repository structure, as they do not represent legitimate research phases.
