@@ -1,0 +1,221 @@
+{
+ "product_id": "landsat/pune_G30_khadakwasla_mutha/1990/seasonal/dry",
+ "schema_version": "1.0.0",
+ "processing_version": "cube-0.1.0",
+ "created_utc": "2026-10-01T20:41:06Z",
+ "study_area": {
+  "id": "pune_district",
+  "version": "5ef4c24587a9",
+  "area_km2": 15650.14
+ },
+ "grid": {
+  "id": "pune_G30_khadakwasla_mutha",
+  "crs": "EPSG:32643",
+  "res": 30.0,
+  "x0": 364785.0,
+  "y1": 2052645.0,
+  "width": 709,
+  "height": 522,
+  "corner_offset": 15.0,
+  "transform": [
+   30.0,
+   0.0,
+   364785.0,
+   0.0,
+   -30.0,
+   2052645.0
+  ],
+  "bounds": [
+   364785.0,
+   2036985.0,
+   386055.0,
+   2052645.0
+  ]
+ },
+ "temporal": {
+  "year": 1990,
+  "period": "dry",
+  "kind": "season",
+  "start": "1990-01-01",
+  "end": "1990-05-31",
+  "complete": true,
+  "archive_cutoff_utc": "2026-10-01 20:07:32.382410+00:00",
+  "first_observation": "1990-01-13",
+  "last_observation": "1990-05-21"
+ },
+ "sources": [
+  {
+   "item_id": "LT05_L2SP_147047_19900403_02_T1",
+   "platform": "landsat-5",
+   "date": "1990-04-03",
+   "tile_id": "P147R047",
+   "cloud_cover": 0.0,
+   "n_clear_px": 370098
+  },
+  {
+   "item_id": "LT05_L2SP_147047_19900129_02_T1",
+   "platform": "landsat-5",
+   "date": "1990-01-29",
+   "tile_id": "P147R047",
+   "cloud_cover": 0.0,
+   "n_clear_px": 370072
+  },
+  {
+   "item_id": "LT05_L2SP_147047_19900505_02_T1",
+   "platform": "landsat-5",
+   "date": "1990-05-05",
+   "tile_id": "P147R047",
+   "cloud_cover": 0.0,
+   "n_clear_px": 370098
+  },
+  {
+   "item_id": "LT05_L2SP_147047_19900113_02_T1",
+   "platform": "landsat-5",
+   "date": "1990-01-13",
+   "tile_id": "P147R047",
+   "cloud_cover": 0.0,
+   "n_clear_px": 369976
+  },
+  {
+   "item_id": "LT05_L2SP_147047_19900214_02_T1",
+   "platform": "landsat-5",
+   "date": "1990-02-14",
+   "tile_id": "P147R047",
+   "cloud_cover": 2.0,
+   "n_clear_px": 309929
+  },
+  {
+   "item_id": "LT05_L2SP_147047_19900318_02_T1",
+   "platform": "landsat-5",
+   "date": "1990-03-18",
+   "tile_id": "P147R047",
+   "cloud_cover": 0.0,
+   "n_clear_px": 370098
+  },
+  {
+   "item_id": "LT05_L2SP_147047_19900521_02_T1",
+   "platform": "landsat-5",
+   "date": "1990-05-21",
+   "tile_id": "P147R047",
+   "cloud_cover": 28.0,
+   "n_clear_px": 227961
+  }
+ ],
+ "sensors": {
+  "landsat-5": 7
+ },
+ "processing": {
+  "collection": "landsat-c2-l2",
+  "level": "L2SP surface reflectance",
+  "qa_mask_bits": {
+   "fill": 0,
+   "dilated_cloud": 1,
+   "cirrus": 2,
+   "cloud": 3,
+   "cloud_shadow": 4,
+   "snow": 5
+  },
+  "valid_dn": [
+   7273,
+   43636
+  ],
+  "scale": 2.75e-05,
+  "offset": -0.2,
+  "negative_reflectance": "clipped to 0 (dark targets), counted",
+  "composite": "per-pixel median of clear observations",
+  "uncertainty": "standard error of the median from scaled MAD (n>=3)",
+  "read": "native nearest (exact copy)",
+  "harmonization": "local_pune_v1"
+ },
+ "statistics": {
+  "district_pixels": 370098,
+  "district_valid_fraction": 1.0,
+  "district_reliable_fraction_ge3": 1.0,
+  "single_obs_fraction": 0.0,
+  "n_clear_median": 7.0,
+  "n_clear_p10": 6.0,
+  "n_clear_p90": 7.0,
+  "clear_pct_mean": 92.26149560386709,
+  "sensor_contribution_clear_px": {
+   "landsat-4": 0,
+   "landsat-5": 2388232,
+   "landsat-7": 0,
+   "landsat-8": 0,
+   "landsat-9": 0
+  },
+  "n_items": 7,
+  "n_items_with_clear_px": 7,
+  "scene_cloud_mean": 4.285714285714286,
+  "band_medians": {
+   "blue": 0.06280504912137985,
+   "green": 0.10280255973339081,
+   "red": 0.12661899626255035,
+   "nir08": 0.20909081399440765,
+   "swir16": 0.2226049154996872,
+   "swir22": 0.1679868996143341
+  },
+  "uncertainty_medians": {
+   "blue": 0.003628531703725457,
+   "green": 0.005580071825534105,
+   "red": 0.0075066545978188515,
+   "nir08": 0.010111222974956036,
+   "swir16": 0.009693552739918232,
+   "swir22": 0.007711360696703196
+  }
+ },
+ "files": {
+  "optical_composite": {
+   "path": "data/composites/pune_G30_khadakwasla_mutha/1990/landsat/seasonal/dry/optical_composite.tif",
+   "sha256": "231cd3f48f52889e1507e8f1fb0d2a5a7f0a0aa6489f74334b624145b9487bef"
+  },
+  "uncertainty": {
+   "path": "data/composites/pune_G30_khadakwasla_mutha/1990/landsat/seasonal/dry/uncertainty.tif",
+   "sha256": "4f2ea27101121a0eb5367cb900b3f50904a8386f899eb2720c53d18735e63a7b"
+  },
+  "observation_count": {
+   "path": "data/composites/pune_G30_khadakwasla_mutha/1990/landsat/seasonal/dry/observation_count.tif",
+   "sha256": "8c44bba47e9875c159af66d20f39265c5db422477bd3eeb546da134d7ef006ad"
+  },
+  "valid_mask": {
+   "path": "data/composites/pune_G30_khadakwasla_mutha/1990/landsat/seasonal/dry/valid_mask.tif",
+   "sha256": "6b49178a7f56df72ef8ac459c15f95524dd8511be3eed25315d13b015e25a0e6"
+  },
+  "qa": {
+   "path": "data/composites/pune_G30_khadakwasla_mutha/1990/landsat/seasonal/dry/qa.tif",
+   "sha256": "f90dfa58f625c28fa9e36627b907c5613e8adcd38a905e8f317074a9d92d8290"
+  }
+ },
+ "code": {
+  "package_version": "0.1.0",
+  "schema_version": "1.0.0",
+  "git_commit": "no-git",
+  "config_hash": "959ad37ef08b7a9e",
+  "python": "3.13.15",
+  "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+  "packages": {
+   "numpy": "2.5.3",
+   "rasterio": "1.5.2",
+   "geopandas": "1.2.0",
+   "pyproj": "3.8.0",
+   "shapely": "2.1.2",
+   "pystac_client": "0.9.0",
+   "planetary_computer": "1.0.0",
+   "pyarrow": "25.0.1",
+   "gdal": "3.12.2"
+  }
+ },
+ "qa": {
+  "product_id": "landsat/pune_G30_khadakwasla_mutha/1990/seasonal/dry",
+  "status": "PASS",
+  "fail": [],
+  "warn": [],
+  "district_valid_fraction": 1.0,
+  "permanent_water_control": {
+   "cells": 3488,
+   "fraction_mndwi_gt0": 0.986,
+   "median_mndwi": 0.558
+  },
+  "residual_cloud_fraction": 0.0,
+  "persistent_bright_excluded_px": 19
+ }
+}

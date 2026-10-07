@@ -1,0 +1,30 @@
+{
+ "_instructions": "TEMPLATE - copy to experiments/registry4/addenda/phase6_countersignature.json ONLY if you, the researcher, accept the decisions. Fill researcher_name and signed_utc, set verdict_accepted to true per decision you accept. The SHA-256 values pin the exact addendum text you accept; if an addendum changes, the countersignature no longer matches and the pre-run checklist fails. Delete this _instructions field. Do not countersign on someone else's behalf.",
+ "researcher_name": "",
+ "signed_utc": "",
+ "statement": "I have read docs/phase6_D1_review.md, docs/phase6_D2_sensor_correction_decision.md and docs/phase6_D3_compute_decision.md and the registered addenda and errata, and I accept the decisions marked below.",
+ "decisions": {
+  "D1": {
+   "verdict": "APPROVE WITH SPECIFIC CORRECTION",
+   "addendum": "experiments/registry4/addenda/P4-C1_at_v2_addendum_1.json",
+   "addendum_sha256": "db13cfae510bb5b04bb748fbcd95729f14faf55fd844fb397599faf73cd4c0ea",
+   "erratum": "experiments/registry4/addenda/P4-C1_at_v2_addendum_1_erratum_1.json",
+   "erratum_sha256": "6f13897f6e2128febb79b8bf46472a56dbeb352c0786d9beae6278a1bea41d4d",
+   "verdict_accepted": false
+  },
+  "D2": {
+   "verdict": "B: PIF-fitted TM -> cube OLI-equivalent (c2_tm_pif_v1)",
+   "addendum": "experiments/registry4/addenda/P4-C2_at_v2_addendum_1.json",
+   "addendum_sha256": "c000e80c3c5beea0a446d8caa4eacd144124c485336478b51ab35be9b058cd82",
+   "erratum": "experiments/registry4/addenda/P4-C2_at_v2_addendum_1_erratum_1.json",
+   "erratum_sha256": "d78feae7b97ccce3c6dd2ed050e08da4956fe0889ba3ce19c3fcbe678dfbb393",
+   "transform_sha256": "782eaef3e95c9dbe4b79868d936fd1e96ff1aa681d93ad609b5463ddd119db47",
+   "verdict_accepted": false
+  },
+  "D3": {
+   "verdict": "Route A",
+   "doc": "docs/phase6_D3_compute_decision.md",
+   "verdict_accepted": false
+  }
+ }
+}

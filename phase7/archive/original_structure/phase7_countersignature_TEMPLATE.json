@@ -1,0 +1,37 @@
+{
+ "_instructions": "TEMPLATE - copy to experiments/registry4/addenda/phase7_countersignature.json only if you, the researcher, adopt the runner specifications. One entry per adopted addendum, with the SHA-256 of the ADOPTED file.",
+ "researcher_name": "",
+ "signed_utc": "",
+ "decisions": {
+  "P4-C1": {
+   "adopted_addendum": "experiments/registry4/addenda/P4-C1_at_v2_addendum_2.json",
+   "adopted_addendum_sha256": "",
+   "accepted": false
+  },
+  "P4-C2": {
+   "adopted_addendum": "experiments/registry4/addenda/P4-C2_at_v2_addendum_2.json",
+   "adopted_addendum_sha256": "",
+   "accepted": false
+  },
+  "P4-C3": {
+   "adopted_addendum": "experiments/registry4/addenda/P4-C3_at_v2_addendum_1.json",
+   "adopted_addendum_sha256": "",
+   "accepted": false
+  },
+  "P4-C4": {
+   "adopted_addendum": "experiments/registry4/addenda/P4-C4_at_v2_addendum_1.json",
+   "adopted_addendum_sha256": "",
+   "accepted": false
+  },
+  "P4-C5": {
+   "adopted_addendum": "experiments/registry4/addenda/P4-C5_at_v2_addendum_1.json",
+   "adopted_addendum_sha256": "",
+   "accepted": false
+  },
+  "P4-C6": {
+   "adopted_addendum": "experiments/registry4/addenda/P4-C6_at_v2_addendum_1.json",
+   "adopted_addendum_sha256": "",
+   "accepted": false
+  }
+ }
+}
