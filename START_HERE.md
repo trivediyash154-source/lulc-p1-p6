@@ -53,9 +53,9 @@ The authority hierarchy is strictly ordered as follows:
 
 Read in this exact sequential order:
 
-1. [CLAUDE_START_HERE.md](CLAUDE_START_HERE.md) (This document)
+1. [START_HERE.md](START_HERE.md) (This document)
 2. [CURRENT_RESEARCH_VISION.md](CURRENT_RESEARCH_VISION.md) (Defines overarching PhD research vision and questions)
-3. [CLAUDE_HANDOFF_MASTER.md](CLAUDE_HANDOFF_MASTER.md) (Safety rules, prohibitions, decision logs)
+3. [HANDOFF_MASTER.md](HANDOFF_MASTER.md) (Safety rules, prohibitions, decision logs)
 4. [PROJECT_MASTER_INDEX.md](PROJECT_MASTER_INDEX.md) (Master navigation map and artifact directory)
 5. [RESEARCH_HISTORY.md](RESEARCH_HISTORY.md) (Chronological evolution from Phase 1 through Phase 6)
 6. [RESEARCH_STATUS.md](RESEARCH_STATUS.md) (Gate status, blockers, validation vs readiness)

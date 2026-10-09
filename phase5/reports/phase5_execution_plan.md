@@ -33,7 +33,7 @@ HUMAN GOLD + DISTRICT 30 m CUBE → frozen confirmatory tests (P4-C1@v2 first; s
 | D2 | Fix the **P4-C2@v2 transform** before the run: published TM/ETM+→OLI coefficients, **or** a PIF fit on non-validation blocks (P5-E2 provides near-coincident PIF pairs) | The record allows two alternatives; choosing after seeing gold results would be a forking path | registry record P4-C2@v2 |
 | D3 | **Compute route** for the full cube: a VM running the repository engine (reference, Planetary Computer, no credentials), or an Earth Engine project (GEE script; documented differences) | The full cube needs about 22 wall-clock hours on 2 CPUs (≈ 40-45 CPU-hours; estimate from the pilot, §5) and about 50 GB of disk — beyond this sandbox | `docs/phase5_district_cube_spec.md` |
 
-## 4. Human workstreams (cannot be done by Claude; no substitute will be produced)
+## 4. Human workstreams (cannot be automated; no substitute will be produced)
 
 | pass | content | interpretations | effort at 1-2 min each (planning estimate, not a result) |
 |---|---|---|---|

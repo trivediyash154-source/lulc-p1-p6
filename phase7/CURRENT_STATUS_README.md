@@ -1,5 +1,7 @@
 # IMPORTANT PHASE 7 STATUS NOTICE
 
+> Part of the Pune District Earth Observation research archive. For the complete project guide, start at the [README](../README.md).
+
 > [!WARNING]
 > **HISTORICAL / NON-AUTHORITATIVE / PRE-CURRENT-ENVIRONMENT WORKING SNAPSHOT**
 > 

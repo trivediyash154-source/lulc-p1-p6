@@ -1,5 +1,7 @@
 # RESEARCH STATUS: PUNE EARTH OBSERVATION PhD
 
+> Part of the Pune District Earth Observation research archive. For the complete project guide, start at the [README](README.md).
+
 > [!IMPORTANT]
 > **ARCHIVE NOTICE:**
 > The archived material inside `phase7/` represents an earlier snapshot generated under severe storage constraints (~18 GB free space) prior to container recovery. It is **NOT** authoritative for current Phase 7. Current live status is maintained in [LIVE_PHASE7_STATUS.md](LIVE_PHASE7_STATUS.md).

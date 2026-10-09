@@ -101,9 +101,9 @@ See the comprehensive research framework in [CURRENT_RESEARCH_VISION.md](CURRENT
 
 | Artifact | Authoritative Path |
 |:---|:---|
-| Master Entry Point for AI Assistants | [CLAUDE_START_HERE.md](CLAUDE_START_HERE.md) |
+| Master Entry Point for New Contributors | [START_HERE.md](START_HERE.md) |
 | Research Vision & Scope | [CURRENT_RESEARCH_VISION.md](CURRENT_RESEARCH_VISION.md) |
-| Safety & Handoff Protocol | [CLAUDE_HANDOFF_MASTER.md](CLAUDE_HANDOFF_MASTER.md) |
+| Safety & Handoff Protocol | [HANDOFF_MASTER.md](HANDOFF_MASTER.md) |
 | Current Live Phase 7 Status | [LIVE_PHASE7_STATUS.md](LIVE_PHASE7_STATUS.md) |
 | Chronological Narrative | [RESEARCH_HISTORY.md](RESEARCH_HISTORY.md) |
 | Research Status & Gating | [RESEARCH_STATUS.md](RESEARCH_STATUS.md) |
@@ -117,11 +117,11 @@ See the comprehensive research framework in [CURRENT_RESEARCH_VISION.md](CURRENT
 
 ---
 
-## 9. How a New Research Agent (Claude) Must Navigate This Repository
+## 9. How a New Contributor Must Navigate This Repository
 
-1. **Start at [CLAUDE_START_HERE.md](CLAUDE_START_HERE.md)** — Do NOT take action until this is read.
+1. **Start at [START_HERE.md](START_HERE.md)** — Do NOT take action until this is read.
 2. **Read [CURRENT_RESEARCH_VISION.md](CURRENT_RESEARCH_VISION.md)** — Understand what the project is, what is established, and what remains to be tested.
-3. **Read [CLAUDE_HANDOFF_MASTER.md](CLAUDE_HANDOFF_MASTER.md)** — Review mandatory negative constraints and safety rules.
+3. **Read [HANDOFF_MASTER.md](HANDOFF_MASTER.md)** — Review mandatory negative constraints and safety rules.
 4. **Read [LIVE_PHASE7_STATUS.md](LIVE_PHASE7_STATUS.md)** — Check the active execution status in the clean environment.
 5. **Inspect [RESEARCH_STATUS.md](RESEARCH_STATUS.md)** and phase READMEs (`phase1/` through `phase6/`).
 6. **Execute a READ-ONLY AUDIT.** Report findings to the researcher and await explicit authorization.

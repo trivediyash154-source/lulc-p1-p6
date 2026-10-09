@@ -13,7 +13,7 @@
 1. **Original git history (Phases 1–6):** Lost when the session container was reclaimed; restored from Phase 6 snapshot
 2. **Planetary Computer scene catalog:** Scene availability may change over time; the manifest pins the scene list
 3. **Earth Engine products:** EE asset versions are opaque; not pinned
-4. **AI/Claude conversation context:** The original Claude conversation is not preserved in this repository; findings are derived from the conversation but recorded in the research reports
+4. **Working-session context:** The original interactive working sessions are not preserved in this repository; their findings are recorded in the research reports
 
 ## Verification Steps
 

@@ -1,5 +1,8 @@
 # Current Live Phase 7 Status & Environment Audit
 
+> [!NOTE]
+> **Update, 9 October 2026.** The live Phase 7 district build is complete: 72 Landsat standard composites, 44 Landsat-5 corrected composites, 16 Sentinel-1 composites (2020), 12 terrain layers and 2 validated feature cubes, in 34,965 SHA-256-fingerprinted files (95.3 GB). Human gold (0 / 641) and T1 (0 / 699) labelling is the next stage, and the confirmatory experiments remain blocked until those labels are frozen. See the [README](README.md), Sections 1, 9 and 13, for details. The tables below record the earlier pilot-stage status.
+
 ## 1. Authoritative Status Declaration
 
 > [!IMPORTANT]
@@ -43,7 +46,7 @@
 
 ---
 
-## 5. Rules for Any AI Research Assistant (Claude)
+## 5. Rules for Any Contributor or Research Assistant
 
 1. **Do NOT initiate any confirmatory experiment runs.** All six preregistered records remain in `PENDING / DO NOT RUN` state.
 2. **Do NOT fabricate or synthesize ground-truth labels.** Neither automated AI classification nor consensus silver labels may ever be substituted for human Tier-A interpretation.

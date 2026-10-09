@@ -12,7 +12,7 @@ _Generated 2026-10-03T01:22:45Z by `scripts/write_phase7_docs.py`; git `73e2ebc`
 | this_sandbox | {"cpus": 2, "mem_total": "7 GB", "free_disk": "29G", "memory_limit_note": "6 GB cgroup (OOM kills recorded in Phases 5-6)"} |
 | cloud_credentials | none |
 | azure_cli | not installed / no credentials |
-| linked_computer | macOS arm64 laptop (MacBook Air, Claude desktop app), no folder connected (observed 2026-10-02T18:56Z via device info) - not the D3 machine |
+| linked_computer | macOS arm64 laptop (MacBook Air, desktop assistant app), no folder connected (observed 2026-10-02T18:56Z via device info) - not the D3 machine |
 | verdict | no Route-A environment reachable from this session; no credentials were invented; compute boundary stands |
 
 The processing engine was **not** changed because the sandbox cannot run it (D3 Route A stands). No credentials were invented.

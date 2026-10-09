@@ -1,8 +1,8 @@
-# PUNE EO PhD — CLAUDE HANDOFF MASTER
+# PUNE EO PhD — PROJECT HANDOFF MASTER
 
 > [!IMPORTANT]
 > **PRIMARY ENTRY POINT:**
-> Every new AI research assistant (Claude) **MUST START AT [CLAUDE_START_HERE.md](CLAUDE_START_HERE.md)** before reading this document or touching any files.
+> Every new contributor or research assistant **MUST START AT [START_HERE.md](START_HERE.md)** before reading this document or touching any files.
 
 ---
 
@@ -158,13 +158,13 @@ All files in this repository are under 30 MB and stored directly in Git. The lar
 
 ---
 
-## FIRST ACTION FOR A NEW CLAUDE
+## FIRST ACTION FOR A NEW CONTRIBUTOR
 
 **EXECUTE A READ-ONLY AUDIT.** Do NOT immediately run experiments.
 
-1. Start at **[CLAUDE_START_HERE.md](CLAUDE_START_HERE.md)**
+1. Start at **[START_HERE.md](START_HERE.md)**
 2. Read **[CURRENT_RESEARCH_VISION.md](CURRENT_RESEARCH_VISION.md)**
-3. Read this document (**CLAUDE_HANDOFF_MASTER.md**)
+3. Read this document (**HANDOFF_MASTER.md**)
 4. Read **[PROJECT_MASTER_INDEX.md](PROJECT_MASTER_INDEX.md)**
 5. Read **[RESEARCH_HISTORY.md](RESEARCH_HISTORY.md)**
 6. Read **[LIVE_PHASE7_STATUS.md](LIVE_PHASE7_STATUS.md)**

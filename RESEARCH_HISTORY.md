@@ -1,5 +1,7 @@
 # RESEARCH HISTORY — Chronological Evolution
 
+> Part of the Pune District Earth Observation research archive. For the complete project guide, start at the [README](README.md).
+
 ## Phase 1 — Data Foundation
 ↓
 

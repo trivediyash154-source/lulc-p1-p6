@@ -43,7 +43,7 @@
 
 ---
 
-## 5. Rules for Any AI Research Assistant (Claude)
+## 5. Rules for Any Contributor or Research Assistant
 
 1. **Do NOT initiate any confirmatory experiment runs.** All six preregistered records remain in `PENDING / DO NOT RUN` state.
 2. **Do NOT fabricate or synthesize ground-truth labels.** Neither automated AI classification nor consensus silver labels may ever be substituted for human Tier-A interpretation.

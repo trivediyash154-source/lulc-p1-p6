@@ -1,5 +1,7 @@
 # Current Research Vision: Pune Earth Observation PhD
 
+> Part of the Pune District Earth Observation research archive. For the complete project guide, start at the [README](README.md).
+
 This document defines the current research vision. It does not replace, rewrite, or reinterpret the frozen historical records of Phases 1–6. Historical records remain authoritative for what was actually tested, supported, rejected, or unavailable at each stage.
 
 ---

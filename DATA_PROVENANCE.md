@@ -73,3 +73,26 @@ Feature Engineering (NDVI, NDBI, MNDWI, SAR backscatter, SRTM topography)
   ▼
 Machine Learning Classification & Conformal Set Prediction
 ```
+
+---
+
+## Access Links (as used by the processing code)
+
+All satellite and elevation data are accessed through the Microsoft Planetary Computer STAC API (`https://planetarycomputer.microsoft.com/api/stac/v1`).
+
+| Dataset | Access | Collection / file |
+|:---|:---|:---|
+| Landsat Collection 2 Level-2 (Tier 1) | https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2 | `landsat-c2-l2` |
+| Sentinel-1 RTC γ⁰ | https://planetarycomputer.microsoft.com/dataset/sentinel-1-rtc | `sentinel-1-rtc` |
+| Sentinel-2 L2A | https://planetarycomputer.microsoft.com/dataset/sentinel-2-l2a | `sentinel-2-l2a` |
+| Copernicus DEM GLO-30 | https://planetarycomputer.microsoft.com/dataset/cop-dem-glo-30 | `cop-dem-glo-30` |
+| ESA WorldCover | https://planetarycomputer.microsoft.com/dataset/esa-worldcover | `esa-worldcover` |
+| Esri / Impact Observatory land cover | https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02 | `io-lulc-annual-v02` |
+| JRC Global Surface Water | https://planetarycomputer.microsoft.com/dataset/jrc-gsw | `jrc-gsw` |
+| GLC_FCS30D | https://zenodo.org/records/15063683 | `GLC_FCS30D_19852022maps_E70-E75.zip` |
+| GISA | https://zenodo.org/records/14848113 | `GISA_new_1972_2021_20N_60E.tif` |
+| GHSL GHS-BUILT-S R2023A | https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/ | tiles |
+| WSF-Evolution | https://download.geoservice.dlr.de/WSF_EVO/ | tiles |
+| CHIRPS v2.0 monthly | https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/ | monthly GeoTIFFs |
+| District boundary | https://github.com/wmgeolab/geoBoundaries | gbOpen IND ADM2, commit `9469f09` |
+
